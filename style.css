@@ -1,0 +1,35 @@
+.load{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  transition: opacity 1s, visibility 1s;
+}
+
+.load-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.load::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #3498db;
+  border-radius: 50%;
+  animation: load .75s ease infinite;
+}
+
+@keyframes load{
+  from{
+    transform: rotate(0deg);
+  }to{
+    transform: rotate(360deg);
+  }
+}
